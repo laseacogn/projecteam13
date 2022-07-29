@@ -1,0 +1,556 @@
+/* import fonts */
+@font-face {
+  font-family: "New York Small";
+  src: url("fonts/NewYorkSmall.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "New York Extra Large";
+  src: url("fonts/NewYorkExtraLargeSemibold.otf");
+}
+@font-face {
+  font-family: "SF Mono";
+  src: url("fonts/SFMono-Light.otf");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("fonts/SFProDisplay.OTF");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("fonts/SFPRODISPLAYBOLD.OTF");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SFProText-Light.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SFProText-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SFProText-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+/* general style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+body {
+  font-family: serif;
+  color: black;
+  overflow-x: hidden;
+  font-family: "New York Small";
+  font-size: 20px;
+  line-height: 170%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul:before {
+  content: attr(aria-label);
+  margin-bottom: 19px;
+  display: block;
+}
+.container {
+  max-width: 1356px;
+  margin: auto;
+  padding: 0 20px;
+}
+.container-sm {
+  max-width: 894px;
+  margin: auto;
+  padding: 0 20px;
+}
+.container-xs {
+  max-width: 680px;
+  margin: auto;
+  padding: 0 20px;
+}
+.heading {
+  margin: auto;
+  font-family: "New York Extra Large";
+  font-size: 54px;
+  line-height: 100%;
+  max-width: 800px;
+}
+.description {
+  font-family: "SF Mono";
+  font-size: 20px;
+  line-height: 34px;
+  max-width: 560px;
+  margin: auto;
+}
+.divider {
+  height: 2px;
+  background-color: black;
+  width: 640px;
+  margin: auto;
+  max-width: 100%;
+}
+
+.article-grid img {
+  width: 100%;
+}
+.sub-heading {
+  font-family: "New York Extra Large";
+  font-size: 44px;
+  text-align: center;
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 64px 28px;
+}
+.article-grid .post-title {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "SF Pro Display";
+  font-size: 22px;
+  line-height: 120%;
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* site header */
+.site-header {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  height: 133px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.site-header .logo img {
+  margin-bottom: 37px;
+  width: 395.83px;
+}
+.site-header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 32px;
+}
+.site-header ul li {
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.site-header ul li a {
+  padding-bottom: 41px;
+  display: inline-block;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  font-family: "New York Small";
+}
+.site-header ul li a:hover,
+.site-header .current-menu {
+  border-color: black;
+}
+.navigation-toggle {
+  align-self: center;
+  border: 0;
+  background-color: unset;
+  cursor: pointer;
+  display: none;
+}
+.navigation-toggle div {
+  border-bottom: 1px solid black;
+  width: 24px;
+  margin-bottom: 7px;
+}
+.navigation-toggle div:last-child {
+  margin-bottom: 0;
+}
+/* home page */
+.introduction {
+  margin: auto;
+  margin-top: 77px;
+  text-align: center;
+}
+.introduction .featured-image {
+  width: 854px;
+  max-width: 100vw;
+}
+
+.introduction .heading {
+  margin-top: 44px;
+  margin-bottom: 32px;
+}
+.post-header .heading {
+  margin-top: 53px;
+  margin-bottom: 32px;
+}
+
+.introduction .description {
+  margin-bottom: 34px;
+}
+.post-header .description {
+  margin-bottom: 52px;
+}
+
+.article-list {
+  padding-top: 64px;
+  margin: auto;
+  margin-bottom: 113px;
+}
+.article-list .article-grid {
+  margin-top: 39px;
+}
+/*   .site-footer */
+.site-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-family: "SF Pro Text";
+}
+.site-footer .decoration {
+  padding-top: 18px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  left: -6px;
+}
+.site-footer .decoration b {
+  margin: 0 11px;
+}
+.site-footer .decoration b:first-child {
+  margin-left: 0;
+}
+.footer-logo {
+  margin: auto;
+  margin-top: 105px;
+  margin-bottom: 25.58px;
+  width: 290.91px;
+  height: 27.3px;
+}
+.site-footer .about {
+  max-width: 488px;
+  margin: auto;
+  font-family: "New York Small";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.footer-link {
+  margin: 32px 0 64px 0;
+}
+.footer-link a {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 170%;
+}
+.footer-link ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 29px;
+}
+footer .coppyright {
+  font-size: 12px;
+  line-height: 140%;
+  max-width: 178px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+/* single post */
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 52px;
+}
+img.author-image {
+  width: 57px;
+  height: 57px;
+  object-fit: cover;
+  border-radius: 200px;
+}
+.social {
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  box-shadow: 0px 1px 4px 0px #00000014;
+}
+.post-info .social {
+  flex-basis: 140px;
+  height: 44px;
+}
+.social li {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.post-footer {
+  font-family: "SF Pro Text";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.social li a img {
+  width: 21px;
+  height: 21px;
+}
+.social li:not(:last-child) {
+  border-right: 1px solid #eaeaea;
+}
+
+.social .whatsapp {
+  display: none;
+}
+/* single post header */
+.single-post .featured-image {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.post-info .info {
+  display: flex;
+  text-align: left;
+  column-gap: 16px;
+  align-items: center;
+}
+.post-info .info .author-name {
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  line-height: 19.09px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.post-info .info .post-date {
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  line-height: 19.09px;
+}
+/* single post footer */
+.post-tags {
+  margin-top: 32px;
+  margin-bottom: 34px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #0c0c0c;
+}
+.author-about strong {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.author-about span {
+  font-family: "New York Small";
+  font-weight: 400;
+}
+.post-footer .social {
+  height: 64px;
+}
+.post-footer {
+  padding-top: 52px;
+}
+.post-footer .social a {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  line-height: 160%;
+}
+.author-box {
+  margin-top: 0;
+  margin-bottom: 134.75px;
+  padding-top: 36px;
+  border-top: 1px dashed #000000;
+  line-height: 160%;
+}
+.author-box .author-image {
+  float: left;
+  margin-right: 24px;
+  width: 71.25px;
+  height: 71.25px;
+}
+.eyes-divider {
+  width: 100vw;
+  border-top: 2px solid #000000;
+  position: relative;
+}
+.eyes-divider::before {
+  content: "";
+  display: inline-block;
+  background-image: url(/img/eyes.svg);
+  width: 82px;
+  height: 64.29px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+/* post content */
+.post-header {
+  text-align: center;
+}
+
+.post-content p {
+  font-family: "New York Small";
+  font-size: 20px;
+  line-height: 170%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.post-content ul {
+  font-family: "New York Small";
+  font-size: 20px;
+  line-height: 170%;
+}
+.post-content ul {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.post-content h2 {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 160%;
+  padding-top: 33px;
+}
+.post-content figure {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  max-width: 100vw;
+  width: 854px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  position: relative;
+}
+.post-content figure img {
+  width: 100%;
+}
+figure figcaption {
+  margin: auto;
+  margin-top: 12px;
+  text-align: center;
+  font-family: "SF Pro Text";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  max-width: 481px;
+}
+ul.diamond {
+  list-style-type: none;
+}
+ul.diamond li {
+  display: flex;
+  gap: 15px;
+}
+ul.diamond li:before {
+  content: "⬥";
+  background-size: cover;
+  font-size: 8.5px;
+  display: block;
+  font-size: 12px;
+}
+
+/* related post */
+.related-posts {
+  max-width: 968px !important;
+  margin: auto;
+  margin-top: 73px;
+}
+.related-posts .article-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 34px;
+  margin-top: 27px;
+  margin-bottom: 105px;
+}
+
+/* newsletter */
+.newsletter {
+  padding: 62px 51px 59px 51px;
+  border: 1px solid #000000;
+  text-align: center;
+  border-top-width: 12px;
+  margin-bottom: 111px;
+}
+.newsletter .heading {
+  font-size: 36px;
+  line-height: 28px;
+  color: #090909;
+}
+.newsletter p {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 18px;
+  color: #090909;
+}
+.newsletter form {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-top: 36px;
+  max-width: 488px;
+}
+.newsletter form input,
+.newsletter form input:focus-visible,
+.newsletter form input:focus {
+  border-radius: 0;
+  border: 1px solid #000000;
+  outline: 0;
+}
+.newsletter form input[type="submit"] {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border: 0;
+  padding: 16px 24px;
+  position: absolute;
+  right: 0;
+}
+.newsletter form input[type="email"] {
+  flex-grow: 1;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 15px 145px 15px 16px;
+  /* identical to box height */
+  color: #000000;
+  width: 100%;
+}
